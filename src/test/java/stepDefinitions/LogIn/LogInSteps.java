@@ -8,13 +8,17 @@ import pageObjects.HomePageObjects.HomePage;
 public class LogInSteps {
     TestContext testContext;
     HomePage homePage;
-    public LogInSteps(TestContext testContext){
+    /*public LogInSteps(TestContext testContext){
         this.testContext = testContext;
         homePage = testContext.getPageManager().getHomePage();
-    }
+    }*/
     public LogInSteps(){
         this.testContext = new TestContext();
         this.homePage = testContext.getPageManager().getHomePage();
+    }
+    @Given("User is in page")
+    public void User_is_in_page(){
+        homePage.goToURL();
     }
     @When("User login in system")
     public void User_login_in_system(){

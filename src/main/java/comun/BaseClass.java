@@ -69,7 +69,17 @@ public class BaseClass {
         new WebDriverWait(driverClass, Duration.ofSeconds(waitSecTime)).until(ExpectedConditions.elementToBeClickable(element));
         return true;
     }
-    public void closeDriver(){
+    public static void closeDriver(){
         driver.quit();
+    }
+    public static void defaultContent(WebDriver driverClass) {
+        driverClass.switchTo().defaultContent();
+    }
+    public static void switchingTwoFrameWithDefault(WebDriver driverClass, WebElement firstFrame) {
+        BaseClass.defaultContent(driverClass);
+        BaseClass.switchtoframe(driverClass, firstFrame);
+    }
+    public static void switchtoframe(WebDriver driverClass, WebElement frameElement) {
+        driverClass.switchTo().frame(frameElement);
     }
 }

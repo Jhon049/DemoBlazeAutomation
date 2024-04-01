@@ -8,11 +8,9 @@ public class ReaderManager {
 
     private ReaderManager() {
     }
-
     public static ReaderManager getInstance( ) {
         return readerManager;
     }
-
     public ConfigFileReader getConfigReader() {
         return (configFileReader == null) ? new ConfigFileReader() : configFileReader;
     }
