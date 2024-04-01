@@ -138,10 +138,10 @@ public class HomePage {
         addToCartBttn.click();
     }
     public void putItemsIntoCart() throws InterruptedException {
-        Thread.sleep(500);
+        Thread.sleep(1000);
         BaseClass.waitForVisibility(laptopsTab, 10, driver);
         laptopsTab.click();
-        Thread.sleep(500);
+        Thread.sleep(1000);
         BaseClass.waitForVisibility(laptopProduct, 10, driver);
         laptopProduct.click();
         BaseClass.waitForVisibility(addToCartBttn, 10, driver);
